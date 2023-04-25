@@ -28,12 +28,17 @@ public struct ConnectView: View {
         VStack {
             TextField("URL", text: $url)
             TextField("Token", text: $token)
-            Button("Connect") {
-                Task {
-                    room.connect(url: url, token: token)
+
+            if case .connecting = room.connectionState {
+                ProgressView()
+            } else {
+                Button("Connect") {
+                    Task {
+                        room.connect(url: url, token: token)
+                    }
                 }
+                .disabled(!room.connectionState.isDisconnected)
             }
-            .disabled(!room.connectionState.isDisconnected)
         }
     }
 }

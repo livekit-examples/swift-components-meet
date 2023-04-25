@@ -20,6 +20,7 @@ public struct VideoConferenceView: View {
 
     func buildNotConnectedView() -> some View {
         ConnectView()
+            .frame(maxWidth: 300)
     }
 
     func buildConnectedView() -> some View {
