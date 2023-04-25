@@ -36,6 +36,7 @@ open class UIConfiguration: ObservableObject {
 
     func micOffBuilder() -> some View {
         Image(systemName: "mic.slash.fill")
+            .foregroundColor(.red)
     }
 
     func micOnBuilder() -> some View {

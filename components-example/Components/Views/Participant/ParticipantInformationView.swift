@@ -17,26 +17,29 @@
 import SwiftUI
 import LiveKit
 
-public struct ParticipantView: View {
+public struct ParticipantInformationView: View {
 
     @EnvironmentObject var participant: Participant
     @EnvironmentObject var ui: UIConfiguration
 
     public var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .topLeading) {
-                if let trackPublication = participant.firstCameraPublication {
-                    VideoTrackPublicationView()
-                        .environmentObject(trackPublication)
-                } else {
-                    ui.noVideoBuilder(geometry: geometry)
-                }
-                ParticipantInformationView()
-                    .padding(5)
-                    .background(Color.black.opacity(0.5))
-                    .cornerRadius(7)
-                    .padding()
+
+        HStack(spacing: ui.paddingSmall) {
+
+            Text(participant.identity)
+                .fontWeight(.bold)
+
+            if let audio = participant.firstAudioPublication {
+                TrackPublicationStateBuilder {
+                    ui.micOnBuilder()
+                } off: {
+                    ui.micOffBuilder()
+                }.environmentObject(audio)
+            } else {
+                ui.micOffBuilder()
             }
+
+            ConnectionQualityIndicatorView()
         }
     }
 }

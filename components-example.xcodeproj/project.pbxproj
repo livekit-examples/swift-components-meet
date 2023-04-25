@@ -26,6 +26,7 @@
 		68046C5929F78DB000C94D74 /* ForEachTrackPublication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C5829F78DAF00C94D74 /* ForEachTrackPublication.swift */; };
 		68046C5C29F7917600C94D74 /* PublishCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C5B29F7917600C94D74 /* PublishCameraButton.swift */; };
 		68046C5F29F7973300C94D74 /* PublishMicrophoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C5E29F7973300C94D74 /* PublishMicrophoneButton.swift */; };
+		6849F8F329F7B3D000FB4390 /* ParticipantInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849F8F229F7B3D000FB4390 /* ParticipantInformationView.swift */; };
 		687B62EA29F65F05003FE0FA /* ComponentsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B62E929F65F05003FE0FA /* ComponentsExampleApp.swift */; };
 		687B62EC29F65F05003FE0FA /* VideoConferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B62EB29F65F05003FE0FA /* VideoConferenceView.swift */; };
 		687B62EE29F65F06003FE0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687B62ED29F65F06003FE0FA /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		68046C5B29F7917600C94D74 /* PublishCameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishCameraButton.swift; sourceTree = "<group>"; };
 		68046C5D29F792F300C94D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		68046C5E29F7973300C94D74 /* PublishMicrophoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishMicrophoneButton.swift; sourceTree = "<group>"; };
+		6849F8F229F7B3D000FB4390 /* ParticipantInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInformationView.swift; sourceTree = "<group>"; };
 		687B62E629F65F05003FE0FA /* components-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "components-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		687B62E929F65F05003FE0FA /* ComponentsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsExampleApp.swift; sourceTree = "<group>"; };
 		687B62EB29F65F05003FE0FA /* VideoConferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoConferenceView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				68046C3D29F69B9D00C94D74 /* ParticipantView.swift */,
+				6849F8F229F7B3D000FB4390 /* ParticipantInformationView.swift */,
 				68046C5629F78CC600C94D74 /* ConnectionQualityIndicatorView.swift */,
 			);
 			path = Participant;
@@ -296,6 +299,7 @@
 				68046C5529F7675600C94D74 /* ComponentsScope.swift in Sources */,
 				68046C4F29F7652500C94D74 /* RoomDisconnectButton.swift in Sources */,
 				687B62EA29F65F05003FE0FA /* ComponentsExampleApp.swift in Sources */,
+				6849F8F329F7B3D000FB4390 /* ParticipantInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
