@@ -64,7 +64,7 @@ public struct VideoConferenceView: View {
 
     public var body: some View {
         RoomScope {
-            ConnectionStateBuilder {
+            ConnectionStateBuilder { _ in
                 buildNotConnectedView()
             } connecting: {
                 buildNotConnectedView()
