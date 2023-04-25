@@ -17,13 +17,13 @@
 import SwiftUI
 import LiveKit
 
-struct ForEachParticipant<Content: View>: View {
+public struct ForEachParticipant<Content: View>: View {
 
     @EnvironmentObject var room: Room
 
     let content: ParticipantComponentBuilder<Content>
 
-    init(@ViewBuilder content: @escaping ParticipantComponentBuilder<Content>) {
+    public init(@ViewBuilder content: @escaping ParticipantComponentBuilder<Content>) {
         self.content = content
     }
 
@@ -35,7 +35,7 @@ struct ForEachParticipant<Content: View>: View {
         }
     }
 
-    var body: some View {
+    public var body: some View {
         ForEach(sortedParticipants()) { participant in
             content(participant)
                 .environmentObject(participant)

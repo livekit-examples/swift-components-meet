@@ -17,22 +17,22 @@
 import SwiftUI
 import LiveKit
 
-struct TrackPublicationStateBuilder<OnView: View,
-                                    OffView: View>: View {
+public struct TrackPublicationStateBuilder<OnView: View,
+                                           OffView: View>: View {
 
     @EnvironmentObject var trackPublication: TrackPublication
 
     var onBuilder: ComponentBuilder<OnView>
     var offBuilder: ComponentBuilder<OffView>
 
-    init(@ViewBuilder on: @escaping ComponentBuilder<OnView>,
-                      @ViewBuilder off: @escaping ComponentBuilder<OffView>) {
+    public init(@ViewBuilder on: @escaping ComponentBuilder<OnView>,
+                             @ViewBuilder off: @escaping ComponentBuilder<OffView>) {
 
         self.onBuilder = on
         self.offBuilder = off
     }
 
-    var body: some View {
+    public var body: some View {
         if trackPublication.subscribed, !trackPublication.muted {
             return AnyView(onBuilder())
         } else {

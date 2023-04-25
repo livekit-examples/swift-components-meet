@@ -17,17 +17,19 @@
 import SwiftUI
 import LiveKit
 
-struct ComponentsScope<Content: View>: View {
+public struct ComponentsScope<Content: View>: View {
 
     var content: () -> Content
     let configuration: UIConfiguration
 
-    init(configuration: UIConfiguration? = nil, @ViewBuilder _ content: @escaping () -> Content) {
+    init(configuration: UIConfiguration? = nil,
+         @ViewBuilder _ content: @escaping () -> Content) {
+
         self.configuration = configuration ?? UIConfiguration()
         self.content = content
     }
 
-    var body: some View {
+    public var body: some View {
         content()
             .environmentObject(configuration)
     }

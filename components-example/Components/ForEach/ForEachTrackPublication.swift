@@ -17,9 +17,9 @@
 import SwiftUI
 import LiveKit
 
-struct ForEachTrackPublication<Content: View>: View {
+public struct ForEachTrackPublication<Content: View>: View {
 
-    enum Filter {
+    public enum Filter {
         case all
         case video
         case audio
@@ -30,7 +30,9 @@ struct ForEachTrackPublication<Content: View>: View {
     let filter: Filter
     let content: TrackPublicationComponentBuilder<Content>
 
-    init(filter: Filter = .video, @ViewBuilder content: @escaping TrackPublicationComponentBuilder<Content>) {
+    public init(filter: Filter = .video,
+                @ViewBuilder content: @escaping TrackPublicationComponentBuilder<Content>) {
+
         self.filter = filter
         self.content = content
     }
@@ -44,7 +46,7 @@ struct ForEachTrackPublication<Content: View>: View {
         }
     }
 
-    var body: some View {
+    public var body: some View {
         ForEach(computedTrackPublications()) { trackPublication in
             content(trackPublication)
                 .environmentObject(trackPublication)

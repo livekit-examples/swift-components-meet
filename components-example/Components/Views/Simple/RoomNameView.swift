@@ -17,11 +17,11 @@
 import SwiftUI
 import LiveKit
 
-struct RoomNameView: View {
+public struct RoomNameView: View {
 
     @EnvironmentObject var room: Room
 
-    var body: some View {
+    public var body: some View {
         if let name = room.name {
             Text(name)
         }

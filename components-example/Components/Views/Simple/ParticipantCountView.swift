@@ -17,13 +17,13 @@
 import SwiftUI
 import LiveKit
 
-struct ParticipantCountView: View {
+public struct ParticipantCountView: View {
 
     @EnvironmentObject var room: Room
 
     let includeLocalParticipant: Bool = true
 
-    var body: some View {
+    public var body: some View {
         Text(String(room.remoteParticipants.count + (includeLocalParticipant ? 1 : 0)))
     }
 }

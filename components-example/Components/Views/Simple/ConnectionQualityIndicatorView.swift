@@ -17,12 +17,12 @@
 import SwiftUI
 import LiveKit
 
-struct ConnectionQualityIndicatorView: View {
+public struct ConnectionQualityIndicatorView: View {
 
     @EnvironmentObject var participant: Participant
     @EnvironmentObject var ui: UIConfiguration
 
-    var body: some View {
+    public var body: some View {
         ui.connectionQualityIndicatorBuilder(connectionQuality: participant.connectionQuality)
     }
 }

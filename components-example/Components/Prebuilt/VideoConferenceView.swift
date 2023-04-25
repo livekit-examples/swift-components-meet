@@ -16,7 +16,7 @@
 
 import SwiftUI
 
-struct VideoConferenceView: View {
+public struct VideoConferenceView: View {
 
     func buildNotConnectedView() -> some View {
         ConnectView()
@@ -62,7 +62,7 @@ struct VideoConferenceView: View {
         }
     }
 
-    var body: some View {
+    public var body: some View {
         RoomScope {
             ConnectionStateBuilder {
                 buildNotConnectedView()

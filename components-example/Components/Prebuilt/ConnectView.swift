@@ -17,14 +17,14 @@
 import SwiftUI
 import LiveKit
 
-struct ConnectView: View {
+public struct ConnectView: View {
 
     @EnvironmentObject var room: Room
 
     @AppStorage("url") var url: String = ""
     @AppStorage("token") var token: String = ""
 
-    var body: some View {
+    public var body: some View {
         VStack {
             TextField("URL", text: $url)
             TextField("Token", text: $token)

@@ -18,10 +18,10 @@ import SwiftUI
 import LiveKit
 
 /// Switch the view to build depending on ConnectionState.
-struct ConnectionStateBuilder<DisconnectedView: View,
-                              ConnectingView: View,
-                              ReconnectingView: View,
-                              ConnectedView: View>: View {
+public struct ConnectionStateBuilder<DisconnectedView: View,
+                                     ConnectingView: View,
+                                     ReconnectingView: View,
+                                     ConnectedView: View>: View {
 
     @EnvironmentObject var room: Room
 
@@ -30,10 +30,10 @@ struct ConnectionStateBuilder<DisconnectedView: View,
     var reconnecting: ComponentBuilder<ReconnectingView>
     var connected: ComponentBuilder<ConnectedView>
 
-    init(@ViewBuilder disconnected: @escaping ComponentBuilder<DisconnectedView>,
-                      @ViewBuilder connecting: @escaping ComponentBuilder<ConnectingView>,
-                      @ViewBuilder reconnecting: @escaping ComponentBuilder<ReconnectingView>,
-                      @ViewBuilder connected: @escaping ComponentBuilder<ConnectedView>) {
+    public init(@ViewBuilder disconnected: @escaping ComponentBuilder<DisconnectedView>,
+                             @ViewBuilder connecting: @escaping ComponentBuilder<ConnectingView>,
+                             @ViewBuilder reconnecting: @escaping ComponentBuilder<ReconnectingView>,
+                             @ViewBuilder connected: @escaping ComponentBuilder<ConnectedView>) {
 
         self.disconnected = disconnected
         self.connecting = connecting
@@ -41,7 +41,7 @@ struct ConnectionStateBuilder<DisconnectedView: View,
         self.connected = connected
     }
 
-    var body: some View {
+    public var body: some View {
         switch room.connectionState {
         case .disconnected: return AnyView(disconnected())
         case .connecting: return AnyView(connecting())

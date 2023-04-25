@@ -17,12 +17,12 @@
 import SwiftUI
 import LiveKit
 
-struct VideoTrackPublicationView: View {
+public struct VideoTrackPublicationView: View {
 
     @EnvironmentObject var trackPublication: TrackPublication
     @EnvironmentObject var ui: UIConfiguration
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { geometry in
 
             ZStack {

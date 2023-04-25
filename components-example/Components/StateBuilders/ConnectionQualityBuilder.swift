@@ -17,10 +17,10 @@
 import SwiftUI
 import LiveKit
 
-struct ConnectionQualityBuilder<UnknownView: View,
-                                PoorView: View,
-                                GoodView: View,
-                                ExcellentView: View>: View {
+public struct ConnectionQualityBuilder<UnknownView: View,
+                                       PoorView: View,
+                                       GoodView: View,
+                                       ExcellentView: View>: View {
 
     @EnvironmentObject var participant: Participant
 
@@ -29,10 +29,10 @@ struct ConnectionQualityBuilder<UnknownView: View,
     var goodBuilder: ComponentBuilder<GoodView>
     var excellentBuilder: ComponentBuilder<ExcellentView>
 
-    init(@ViewBuilder unknown: @escaping ComponentBuilder<UnknownView>,
-                      @ViewBuilder poor: @escaping ComponentBuilder<PoorView>,
-                      @ViewBuilder good: @escaping ComponentBuilder<GoodView>,
-                      @ViewBuilder excellent: @escaping ComponentBuilder<ExcellentView>) {
+    public init(@ViewBuilder unknown: @escaping ComponentBuilder<UnknownView>,
+                             @ViewBuilder poor: @escaping ComponentBuilder<PoorView>,
+                             @ViewBuilder good: @escaping ComponentBuilder<GoodView>,
+                             @ViewBuilder excellent: @escaping ComponentBuilder<ExcellentView>) {
 
         self.unknownBuilder = unknown
         self.poorBuilder = poor
@@ -40,7 +40,7 @@ struct ConnectionQualityBuilder<UnknownView: View,
         self.excellentBuilder = excellent
     }
 
-    var body: some View {
+    public var body: some View {
         switch participant.connectionQuality {
         case .unknown: return AnyView(unknownBuilder())
         case .poor: return AnyView(poorBuilder())

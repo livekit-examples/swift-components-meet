@@ -17,12 +17,12 @@
 import SwiftUI
 import LiveKit
 
-struct ParticipantInfoBar: View {
+public struct ParticipantInfoBar: View {
 
     @EnvironmentObject var participant: Participant
     @EnvironmentObject var ui: UIConfiguration
 
-    var body: some View {
+    public var body: some View {
 
         HStack(spacing: ui.paddingSmall) {
             Text(participant.identity)
@@ -42,12 +42,12 @@ struct ParticipantInfoBar: View {
     }
 }
 
-struct ParticipantView: View {
+public struct ParticipantView: View {
 
     @EnvironmentObject var participant: Participant
     @EnvironmentObject var ui: UIConfiguration
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .bottom) {
                 if let trackPublication = participant.firstCameraPublication {
