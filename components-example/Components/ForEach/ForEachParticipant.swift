@@ -17,6 +17,9 @@
 import SwiftUI
 import LiveKit
 
+/// Loops through `Participant`'s in the current `Room`.
+///
+/// > Note: References `Room` environment object.
 public struct ForEachParticipant<Content: View>: View {
 
     @EnvironmentObject var room: Room
@@ -27,7 +30,7 @@ public struct ForEachParticipant<Content: View>: View {
         self.content = content
     }
 
-    func sortedParticipants() -> [Participant] {
+    private func sortedParticipants() -> [Participant] {
         room.allParticipants.values.sorted { p1, p2 in
             if p1 is LocalParticipant { return true }
             if p2 is LocalParticipant { return false }

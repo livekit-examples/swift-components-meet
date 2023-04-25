@@ -17,6 +17,9 @@
 import SwiftUI
 import LiveKit
 
+/// Switch the view to build, depending on the `Participant`'s `ConnectionQuality`.
+///
+/// > Note: References `Participant` environment object.
 public struct ConnectionQualityBuilder<UnknownView: View,
                                        PoorView: View,
                                        GoodView: View,

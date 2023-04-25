@@ -17,7 +17,9 @@
 import SwiftUI
 import LiveKit
 
-/// Switch the view to build depending on ConnectionState.
+/// Switch the view to build depending on the `Room`'s `ConnectionState`.
+///
+/// > Note: References `Room` environment object.
 public struct ConnectionStateBuilder<DisconnectedView: View,
                                      ConnectingView: View,
                                      ReconnectingView: View,

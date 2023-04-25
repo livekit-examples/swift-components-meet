@@ -17,6 +17,12 @@
 import SwiftUI
 import LiveKit
 
+/// Loops through `TrackPublications`'s in the current `Participant`.
+///
+/// - Parameters:
+/// - filter: Type of track to loop through, defaults to `.video`.
+///
+/// > Note: References `Participant` environment object.
 public struct ForEachTrackPublication<Content: View>: View {
 
     public enum Filter {
@@ -37,7 +43,7 @@ public struct ForEachTrackPublication<Content: View>: View {
         self.content = content
     }
 
-    func computedTrackPublications() -> [TrackPublication] {
+    private func computedTrackPublications() -> [TrackPublication] {
         let trackPublications = Array(participant.tracks.values)
         switch filter {
         case .all: return trackPublications

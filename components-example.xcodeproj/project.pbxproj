@@ -88,9 +88,9 @@
 		68046C3029F6617600C94D74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				68046C4D29F762DC00C94D74 /* Simple */,
-				68046C3D29F69B9D00C94D74 /* ParticipantView.swift */,
-				68046C4129F6A16200C94D74 /* VideoTrackPublicationView.swift */,
+				68046C4D29F762DC00C94D74 /* Room */,
+				68046C6029F7A50B00C94D74 /* Participant */,
+				68046C6129F7A53B00C94D74 /* TrackPublication */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,14 +121,13 @@
 			path = StateBuilders;
 			sourceTree = "<group>";
 		};
-		68046C4D29F762DC00C94D74 /* Simple */ = {
+		68046C4D29F762DC00C94D74 /* Room */ = {
 			isa = PBXGroup;
 			children = (
 				68046C4B29F7627E00C94D74 /* RoomNameView.swift */,
 				68046C3729F663BB00C94D74 /* ParticipantCountView.swift */,
-				68046C5629F78CC600C94D74 /* ConnectionQualityIndicatorView.swift */,
 			);
-			path = Simple;
+			path = Room;
 			sourceTree = "<group>";
 		};
 		68046C5029F766BE00C94D74 /* ForEach */ = {
@@ -157,6 +156,23 @@
 				68046C5E29F7973300C94D74 /* PublishMicrophoneButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		68046C6029F7A50B00C94D74 /* Participant */ = {
+			isa = PBXGroup;
+			children = (
+				68046C3D29F69B9D00C94D74 /* ParticipantView.swift */,
+				68046C5629F78CC600C94D74 /* ConnectionQualityIndicatorView.swift */,
+			);
+			path = Participant;
+			sourceTree = "<group>";
+		};
+		68046C6129F7A53B00C94D74 /* TrackPublication */ = {
+			isa = PBXGroup;
+			children = (
+				68046C4129F6A16200C94D74 /* VideoTrackPublicationView.swift */,
+			);
+			path = TrackPublication;
 			sourceTree = "<group>";
 		};
 		687B62DD29F65F05003FE0FA = {
