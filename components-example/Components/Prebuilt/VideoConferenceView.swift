@@ -64,16 +64,14 @@ public struct VideoConferenceView: View {
     }
 
     public var body: some View {
-        RoomScope {
-            ConnectionStateBuilder { _ in
-                buildNotConnectedView()
-            } connecting: {
-                buildNotConnectedView()
-            } reconnecting: {
-                buildConnectedView()
-            } connected: {
-                buildConnectedView()
-            }
+        ConnectionStateBuilder { _ in
+            buildNotConnectedView()
+        } connecting: {
+            buildNotConnectedView()
+        } reconnecting: {
+            buildConnectedView()
+        } connected: {
+            buildConnectedView()
         }
     }
 }

@@ -19,7 +19,9 @@ struct ComponentsExampleApp: App {
     var body: some Scene {
         WindowGroup {
             ComponentsScope(configuration: myCustomUI) {
-                VideoConferenceView()
+                RoomScope {
+                    VideoConferenceView()
+                }
             }
         }
     }
