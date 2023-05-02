@@ -15,31 +15,27 @@
  */
 
 import SwiftUI
-import LiveKit
 
-public struct ParticipantInformationView: View {
+public struct ControlsView: View {
 
-    @EnvironmentObject var participant: Participant
     @EnvironmentObject var ui: UIConfiguration
 
     public var body: some View {
 
-        HStack(spacing: ui.paddingSmall) {
+        PublishCameraButton {
+            ui.enableVideoView()
+        } published: {
+            ui.disableVideoView()
+        }
 
-            Text(participant.identity)
-                .fontWeight(.bold)
+        PublishMicrophoneButton {
+            ui.enableMicrophoneView()
+        } published: {
+            ui.disableMicrophoneView()
+        }
 
-            if let audio = participant.firstAudioPublication {
-                TrackPublicationStateBuilder {
-                    ui.micEnabledView()
-                } off: {
-                    ui.micDisabledView()
-                }.environmentObject(audio)
-            } else {
-                ui.micDisabledView()
-            }
-
-            ConnectionQualityIndicatorView()
+        RoomDisconnectButton {
+            ui.disconnectView()
         }
     }
 }

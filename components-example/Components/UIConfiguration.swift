@@ -34,14 +34,37 @@ open class UIConfiguration: ObservableObject {
             )
     }
 
-    func micOffBuilder() -> some View {
+    func micEnabledView() -> some View {
+        Image(systemName: "mic.fill")
+            .foregroundColor(.orange)
+    }
+
+    func micDisabledView() -> some View {
         Image(systemName: "mic.slash.fill")
             .foregroundColor(.red)
     }
 
-    func micOnBuilder() -> some View {
+    func enableVideoView() -> some View {
+        Image(systemName: "video.slash.fill")
+    }
+
+    func disableVideoView() -> some View {
+        Image(systemName: "video.fill")
+            .foregroundColor(.green)
+    }
+
+    func enableMicrophoneView() -> some View {
+        Image(systemName: "mic.slash.fill")
+    }
+
+    func disableMicrophoneView() -> some View {
         Image(systemName: "mic.fill")
             .foregroundColor(.orange)
+    }
+
+    func disconnectView() -> some View {
+        Image(systemName: "xmark.circle.fill")
+            .foregroundColor(.red)
     }
 
     func connectionQualityIndicatorBuilder(connectionQuality: ConnectionQuality) -> some View {

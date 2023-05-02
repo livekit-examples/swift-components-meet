@@ -40,25 +40,7 @@ public struct VideoConferenceView: View {
 
                 ParticipantCountView()
 
-                PublishCameraButton {
-                    Image(systemName: "video.slash.fill")
-                } published: {
-                    Image(systemName: "video.fill")
-                        .foregroundColor(.green)
-                }
-
-                PublishMicrophoneButton {
-                    Image(systemName: "mic.slash.fill")
-                } published: {
-                    Image(systemName: "mic.fill")
-                        .foregroundColor(.orange)
-                }
-
-                RoomDisconnectButton {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.red)
-
-                }
+                ControlsView()
             }
         }
     }

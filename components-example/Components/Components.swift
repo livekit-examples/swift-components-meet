@@ -20,3 +20,6 @@ import LiveKit
 public typealias ComponentBuilder<Content: View> = () -> Content
 public typealias ParticipantComponentBuilder<Content: View> = (_: Participant) -> Content
 public typealias TrackPublicationComponentBuilder<Content: View> = (_: TrackPublication) -> Content
+
+public typealias ParticipantLayoutBuilder<Content: View> = (_ participant: Participant,
+                                                            _ geometry: GeometryProxy) -> Content

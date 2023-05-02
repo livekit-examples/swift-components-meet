@@ -30,6 +30,7 @@
 		687B62EA29F65F05003FE0FA /* ComponentsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B62E929F65F05003FE0FA /* ComponentsExampleApp.swift */; };
 		687B62EC29F65F05003FE0FA /* VideoConferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B62EB29F65F05003FE0FA /* VideoConferenceView.swift */; };
 		687B62EE29F65F06003FE0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687B62ED29F65F06003FE0FA /* Assets.xcassets */; };
+		68D984C52A00C13D00EF5689 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D984C42A00C13D00EF5689 /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		687B62EB29F65F05003FE0FA /* VideoConferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoConferenceView.swift; sourceTree = "<group>"; };
 		687B62ED29F65F06003FE0FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687B62EF29F65F06003FE0FA /* components_example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = components_example.entitlements; sourceTree = "<group>"; };
+		68D984C42A00C13D00EF5689 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				68046C4B29F7627E00C94D74 /* RoomNameView.swift */,
 				68046C3729F663BB00C94D74 /* ParticipantCountView.swift */,
+				68D984C42A00C13D00EF5689 /* ControlsView.swift */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				68046C3E29F69B9D00C94D74 /* ParticipantView.swift in Sources */,
 				68046C3629F6637800C94D74 /* Components.swift in Sources */,
 				68046C5C29F7917600C94D74 /* PublishCameraButton.swift in Sources */,
+				68D984C52A00C13D00EF5689 /* ControlsView.swift in Sources */,
 				68046C4029F69C7600C94D74 /* ForEachParticipant.swift in Sources */,
 				68046C5929F78DB000C94D74 /* ForEachTrackPublication.swift in Sources */,
 				68046C3829F663BB00C94D74 /* ParticipantCountView.swift in Sources */,
