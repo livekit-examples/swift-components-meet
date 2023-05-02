@@ -18,13 +18,15 @@ import SwiftUI
 
 public struct VideoConferenceView: View {
 
+    @EnvironmentObject var ui: UIConfiguration
+
     func buildNotConnectedView() -> some View {
         ConnectView()
             .frame(maxWidth: 300)
     }
 
     func buildConnectedView() -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: ui.participantViewSpacing) {
             ForEachParticipant { _ in
                 ParticipantView()
                     .background(Color(.darkGray))
@@ -32,7 +34,7 @@ public struct VideoConferenceView: View {
                     .cornerRadius(5)
             }
         }
-        .padding(8)
+        .padding(ui.participantViewSpacing)
         .toolbar {
             ToolbarItemGroup(placement: .automatic) {
                 RoomNameView()

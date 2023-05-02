@@ -22,6 +22,9 @@ open class UIConfiguration: ObservableObject {
 
     var paddingSmall: CGFloat { 5 }
 
+    /// Spacing between ``ParticipantView``s.
+    var participantViewSpacing: CGFloat { 8 }
+
     func noVideoBuilder(geometry: GeometryProxy) -> some View {
         Image(systemName: "video.slash")
             .resizable()
