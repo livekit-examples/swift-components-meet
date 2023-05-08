@@ -29,7 +29,7 @@ public struct ParticipantView: View {
                     VideoTrackPublicationView()
                         .environmentObject(trackPublication)
                 } else {
-                    ui.noVideoBuilder(geometry: geometry)
+                    ui.videoDisabledView(geometry: geometry)
                 }
                 ParticipantInformationView()
                     .padding(5)

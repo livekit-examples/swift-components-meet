@@ -26,7 +26,9 @@ public struct ConnectView: View {
     @AppStorage("token") var token: String = ""
 
     public var body: some View {
-        VStack {
+
+        VStack(spacing: 15) {
+
             ui.textFieldContainer {
                 ui.textField(for: $url, type: .url)
             } label: {
@@ -42,10 +44,12 @@ public struct ConnectView: View {
             if case .connecting = room.connectionState {
                 ProgressView()
             } else {
-                Button("Connect") {
+                ui.button {
                     Task {
                         room.connect(url: url, token: token)
                     }
+                } label: {
+                    Text("Connect")
                 }
                 .disabled(!room.connectionState.isDisconnected)
             }

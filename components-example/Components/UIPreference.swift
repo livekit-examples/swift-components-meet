@@ -25,12 +25,17 @@ open class UIPreference: ObservableObject {
         case token
     }
 
+    enum ButtonType {
+        case connect
+    }
+
     var paddingSmall: CGFloat { 5 }
 
     /// Spacing between ``ParticipantView``s.
     var participantViewSpacing: CGFloat { 8 }
 
-    func noVideoBuilder(geometry: GeometryProxy) -> some View {
+    /// Placeholder view when the video is disabled or not available.
+    func videoDisabledView(geometry: GeometryProxy) -> some View {
         Image(systemName: "video.slash")
             .resizable()
             .aspectRatio(contentMode: .fit)
@@ -47,6 +52,7 @@ open class UIPreference: ObservableObject {
             .foregroundColor(.orange)
     }
 
+    /// Placeholder view when the microphone is disabled or not available.
     func micDisabledView() -> some View {
         Image(systemName: "mic.slash.fill")
             .foregroundColor(.red)
@@ -96,6 +102,10 @@ open class UIPreference: ObservableObject {
         .autocapitalization(.none)
         // .keyboardType(type.toiOSType())
         #endif
+    }
+
+    func button(_ action: @escaping () -> Void, label: () -> some View) -> some View {
+        Button(action: action, label: label)
     }
 
     func connectionQualityIndicatorBuilder(connectionQuality: ConnectionQuality) -> some View {

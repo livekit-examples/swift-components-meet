@@ -26,7 +26,7 @@ public struct VideoTrackPublicationView: View {
         GeometryReader { geometry in
 
             ZStack {
-                ui.noVideoBuilder(geometry: geometry)
+                ui.videoDisabledView(geometry: geometry)
 
                 if let track = trackPublication.track as? VideoTrack,
                    trackPublication.subscribed,
