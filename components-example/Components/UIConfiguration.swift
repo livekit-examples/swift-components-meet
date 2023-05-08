@@ -20,6 +20,11 @@ import LiveKit
 /// Subclass to customize default components UI.
 open class UIConfiguration: ObservableObject {
 
+    enum TextFieldType {
+        case url
+        case token
+    }
+
     var paddingSmall: CGFloat { 5 }
 
     /// Spacing between ``ParticipantView``s.
@@ -68,6 +73,29 @@ open class UIConfiguration: ObservableObject {
     func disconnectView() -> some View {
         Image(systemName: "xmark.circle.fill")
             .foregroundColor(.red)
+    }
+
+    func textFieldContainer(_ childView: () -> some View, label: () -> some View) -> some View {
+        VStack(alignment: .leading, spacing: 10.0) {
+            label()
+                .fontWeight(.bold)
+            childView()
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 10.0)
+                            .strokeBorder(Color.white.opacity(0.3),
+                                          style: StrokeStyle(lineWidth: 1.0)))
+        }
+    }
+
+    func textField(for text: Binding<String>, type: TextFieldType) -> some View {
+        TextField("", text: text)
+            .textFieldStyle(PlainTextFieldStyle())
+            .disableAutocorrection(true)
+        // TODO: add iOS unique view modifiers
+        #if os(iOS)
+        .autocapitalization(.none)
+        // .keyboardType(type.toiOSType())
+        #endif
     }
 
     func connectionQualityIndicatorBuilder(connectionQuality: ConnectionQuality) -> some View {

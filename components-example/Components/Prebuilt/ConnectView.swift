@@ -20,14 +20,24 @@ import LiveKit
 public struct ConnectView: View {
 
     @EnvironmentObject var room: Room
+    @EnvironmentObject var ui: UIConfiguration
 
     @AppStorage("url") var url: String = ""
     @AppStorage("token") var token: String = ""
 
     public var body: some View {
         VStack {
-            TextField("URL", text: $url)
-            TextField("Token", text: $token)
+            ui.textFieldContainer {
+                ui.textField(for: $url, type: .url)
+            } label: {
+                Text("URL")
+            }
+
+            ui.textFieldContainer {
+                ui.textField(for: $token, type: .token)
+            } label: {
+                Text("Token")
+            }
 
             if case .connecting = room.connectionState {
                 ProgressView()

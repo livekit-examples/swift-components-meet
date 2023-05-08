@@ -17,6 +17,9 @@
 import SwiftUI
 import LiveKit
 
+// Scope for Components framework
+struct Components {}
+
 public typealias ComponentBuilder<Content: View> = () -> Content
 public typealias ParticipantComponentBuilder<Content: View> = (_: Participant) -> Content
 public typealias TrackPublicationComponentBuilder<Content: View> = (_: TrackPublication) -> Content
