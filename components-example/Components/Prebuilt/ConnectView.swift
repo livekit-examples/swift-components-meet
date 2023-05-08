@@ -20,7 +20,7 @@ import LiveKit
 public struct ConnectView: View {
 
     @EnvironmentObject var room: Room
-    @EnvironmentObject var ui: UIConfiguration
+    @EnvironmentObject var ui: UIPreference
 
     @AppStorage("url") var url: String = ""
     @AppStorage("token") var token: String = ""

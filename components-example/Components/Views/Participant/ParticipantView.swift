@@ -20,7 +20,7 @@ import LiveKit
 public struct ParticipantView: View {
 
     @EnvironmentObject var participant: Participant
-    @EnvironmentObject var ui: UIConfiguration
+    @EnvironmentObject var ui: UIPreference
 
     public var body: some View {
         GeometryReader { geometry in

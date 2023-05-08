@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MyCustomUI: UIConfiguration {
+class MyCustomUI: UIPreference {
 
 }
 

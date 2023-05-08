@@ -18,7 +18,7 @@ import SwiftUI
 
 public struct ControlsView: View {
 
-    @EnvironmentObject var ui: UIConfiguration
+    @EnvironmentObject var ui: UIPreference
 
     public var body: some View {
 

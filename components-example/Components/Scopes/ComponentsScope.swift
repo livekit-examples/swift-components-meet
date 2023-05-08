@@ -20,17 +20,17 @@ import LiveKit
 public struct ComponentsScope<Content: View>: View {
 
     var content: () -> Content
-    let configuration: UIConfiguration
+    let preference: UIPreference
 
-    init(configuration: UIConfiguration? = nil,
+    init(configuration: UIPreference? = nil,
          @ViewBuilder _ content: @escaping () -> Content) {
 
-        self.configuration = configuration ?? UIConfiguration()
+        self.preference = configuration ?? UIPreference()
         self.content = content
     }
 
     public var body: some View {
         content()
-            .environmentObject(configuration)
+            .environmentObject(preference)
     }
 }

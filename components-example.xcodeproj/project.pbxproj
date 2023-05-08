@@ -17,7 +17,7 @@
 		68046C4229F6A16200C94D74 /* VideoTrackPublicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4129F6A16200C94D74 /* VideoTrackPublicationView.swift */; };
 		68046C4629F6A5A200C94D74 /* ConnectionQualityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4529F6A5A200C94D74 /* ConnectionQualityBuilder.swift */; };
 		68046C4829F6A9FB00C94D74 /* TrackPublicationStateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4729F6A9FB00C94D74 /* TrackPublicationStateBuilder.swift */; };
-		68046C4A29F6E5B300C94D74 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4929F6E5B300C94D74 /* UIConfiguration.swift */; };
+		68046C4A29F6E5B300C94D74 /* UIPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4929F6E5B300C94D74 /* UIPreference.swift */; };
 		68046C4C29F7627E00C94D74 /* RoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4B29F7627E00C94D74 /* RoomNameView.swift */; };
 		68046C4F29F7652500C94D74 /* RoomDisconnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C4E29F7652500C94D74 /* RoomDisconnectButton.swift */; };
 		68046C5329F7674B00C94D74 /* RoomScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68046C5229F7674B00C94D74 /* RoomScope.swift */; };
@@ -43,7 +43,7 @@
 		68046C4129F6A16200C94D74 /* VideoTrackPublicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrackPublicationView.swift; sourceTree = "<group>"; };
 		68046C4529F6A5A200C94D74 /* ConnectionQualityBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionQualityBuilder.swift; sourceTree = "<group>"; };
 		68046C4729F6A9FB00C94D74 /* TrackPublicationStateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPublicationStateBuilder.swift; sourceTree = "<group>"; };
-		68046C4929F6E5B300C94D74 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
+		68046C4929F6E5B300C94D74 /* UIPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreference.swift; sourceTree = "<group>"; };
 		68046C4B29F7627E00C94D74 /* RoomNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNameView.swift; sourceTree = "<group>"; };
 		68046C4E29F7652500C94D74 /* RoomDisconnectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDisconnectButton.swift; sourceTree = "<group>"; };
 		68046C5229F7674B00C94D74 /* RoomScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomScope.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		68046C2D29F6609A00C94D74 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				68046C4929F6E5B300C94D74 /* UIConfiguration.swift */,
+				68046C4929F6E5B300C94D74 /* UIPreference.swift */,
 				68046C3529F6637800C94D74 /* Components.swift */,
 				68046C5129F7673C00C94D74 /* Scopes */,
 				68046C4429F6A56700C94D74 /* StateBuilders */,
@@ -299,7 +299,7 @@
 				68046C4829F6A9FB00C94D74 /* TrackPublicationStateBuilder.swift in Sources */,
 				68046C3A29F6651600C94D74 /* ConnectView.swift in Sources */,
 				687B62EC29F65F05003FE0FA /* VideoConferenceView.swift in Sources */,
-				68046C4A29F6E5B300C94D74 /* UIConfiguration.swift in Sources */,
+				68046C4A29F6E5B300C94D74 /* UIPreference.swift in Sources */,
 				68046C5529F7675600C94D74 /* ComponentsScope.swift in Sources */,
 				68046C4F29F7652500C94D74 /* RoomDisconnectButton.swift in Sources */,
 				687B62EA29F65F05003FE0FA /* ComponentsExampleApp.swift in Sources */,

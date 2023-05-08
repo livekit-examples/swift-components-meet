@@ -20,7 +20,7 @@ import LiveKit
 public struct VideoTrackPublicationView: View {
 
     @EnvironmentObject var trackPublication: TrackPublication
-    @EnvironmentObject var ui: UIConfiguration
+    @EnvironmentObject var ui: UIPreference
 
     public var body: some View {
         GeometryReader { geometry in

@@ -18,7 +18,7 @@ import SwiftUI
 import LiveKit
 
 /// Subclass to customize default components UI.
-open class UIConfiguration: ObservableObject {
+open class UIPreference: ObservableObject {
 
     enum TextFieldType {
         case url
