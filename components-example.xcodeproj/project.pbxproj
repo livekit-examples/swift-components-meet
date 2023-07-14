@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68046C3429F6623900C94D74 /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68046C3329F6623900C94D74 /* LiveKit */; };
+		68707C2C2A6132BA00AC6830 /* LiveKitComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 68707C2B2A6132BA00AC6830 /* LiveKitComponents */; };
 		687B62EA29F65F05003FE0FA /* ComponentsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B62E929F65F05003FE0FA /* ComponentsExampleApp.swift */; };
 		687B62EE29F65F06003FE0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687B62ED29F65F06003FE0FA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68046C3429F6623900C94D74 /* LiveKit in Frameworks */,
+				68707C2C2A6132BA00AC6830 /* LiveKitComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = "components-example";
 			packageProductDependencies = (
 				68046C3329F6623900C94D74 /* LiveKit */,
+				68707C2B2A6132BA00AC6830 /* LiveKitComponents */,
 			);
 			productName = "components-example";
 			productReference = 687B62E629F65F05003FE0FA /* components-example.app */;
@@ -362,6 +365,10 @@
 		68046C3329F6623900C94D74 /* LiveKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LiveKit;
+		};
+		68707C2B2A6132BA00AC6830 /* LiveKitComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LiveKitComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

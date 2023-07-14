@@ -5,6 +5,9 @@
       location = "group:../client-sdk-swift">
    </FileRef>
    <FileRef
+      location = "group:../client-components-swift">
+   </FileRef>
+   <FileRef
       location = "group:components-example.xcodeproj">
    </FileRef>
 </Workspace>
