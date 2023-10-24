@@ -11,12 +11,21 @@
         }
       },
       {
-        "package": "WebRTC",
-        "repositoryURL": "https://github.com/webrtc-sdk/Specs.git",
+        "package": "SwiftDocCPlugin",
+        "repositoryURL": "https://github.com/apple/swift-docc-plugin.git",
         "state": {
           "branch": null,
-          "revision": "2f6bab30c8df0fe59ab3e58bc99097f757f85f65",
-          "version": "104.5112.17"
+          "revision": "26ac5758409154cc448d7ab82389c520fa8a8247",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "SymbolKit",
+        "repositoryURL": "https://github.com/apple/swift-docc-symbolkit",
+        "state": {
+          "branch": null,
+          "revision": "b45d1f2ed151d057b54504d653e0da5552844e34",
+          "version": "1.0.0"
         }
       },
       {
@@ -35,6 +44,15 @@
           "branch": null,
           "revision": "f25867a208f459d3c5a06935dceb9083b11cd539",
           "version": "1.22.0"
+        }
+      },
+      {
+        "package": "WebRTC",
+        "repositoryURL": "https://github.com/livekit/webrtc-xcframework-static.git",
+        "state": {
+          "branch": null,
+          "revision": "05fb98380b8c2c43041050be6170ffa3dbc64174",
+          "version": "114.5735.9"
         }
       }
     ]
