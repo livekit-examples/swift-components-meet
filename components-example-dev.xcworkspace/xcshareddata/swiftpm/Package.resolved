@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Promises",
-        "repositoryURL": "https://github.com/google/promises.git",
-        "state": {
-          "branch": null,
-          "revision": "ec957ccddbcc710ccc64c9dcbd4c7006fcf8b73a",
-          "version": "2.2.0"
-        }
-      },
-      {
         "package": "SwiftDocCPlugin",
         "repositoryURL": "https://github.com/apple/swift-docc-plugin.git",
         "state": {
@@ -33,8 +24,8 @@
         "repositoryURL": "https://github.com/apple/swift-log.git",
         "state": {
           "branch": null,
-          "revision": "32e8d724467f8fe623624570367e3d50c5638e46",
-          "version": "1.5.2"
+          "revision": "532d8b529501fb73a2455b179e0bbb6d49b652ed",
+          "version": "1.5.3"
         }
       },
       {
@@ -42,8 +33,8 @@
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
           "branch": null,
-          "revision": "f25867a208f459d3c5a06935dceb9083b11cd539",
-          "version": "1.22.0"
+          "revision": "07f7f26ded8df9645c072f220378879c4642e063",
+          "version": "1.25.1"
         }
       },
       {
