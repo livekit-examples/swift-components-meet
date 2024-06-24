@@ -20,10 +20,13 @@ import SwiftUI
 
 @main
 struct ComponentsExampleApp: App {
+    // Demo e2ee key
+    let e2eeOptions = E2EEOptions(keyProvider: BaseKeyProvider(isSharedKey: true, sharedKey: "hello-livekit"))
+
     var body: some Scene {
         WindowGroup {
             // ComponentsScope(uiOptions: CustomUIExample()) {
-            RoomScope {
+            RoomScope(roomOptions: RoomOptions(e2eeOptions: e2eeOptions)) {
                 VideoConferenceView()
             }
             // }
