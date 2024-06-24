@@ -25,7 +25,7 @@ public struct ConnectView: View {
     @AppStorage("url") var url: String = ""
     @AppStorage("token") var token: String = ""
 
-    @State private var isErrorAlertShowing = false
+    @State private var isShowingErrorAlert = false
 
     public var body: some View {
         VStack(spacing: 15) {
@@ -54,14 +54,14 @@ public struct ConnectView: View {
                 .disabled(_room.connectionState != .disconnected)
             }
         }
-        .alert(isPresented: $isErrorAlertShowing, error: _room.disconnectError) {
+        .alert(isPresented: $isShowingErrorAlert, error: _room.disconnectError) {
             Button("OK") {
                 //
             }
         }
         .onChange(of: _room.disconnectError) { error in
             if error != nil {
-                isErrorAlertShowing = true
+                isShowingErrorAlert = true
             }
         }
     }

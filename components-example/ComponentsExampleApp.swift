@@ -14,14 +14,9 @@
  * limitations under the License.
  */
 
+import LiveKit
 import LiveKitComponents
 import SwiftUI
-
-// final class CustomUIExample: UIOptions {
-//    override func enableMicView() -> AnyView {
-//        AnyView(Text("Enable Mic"))
-//    }
-// }
 
 @main
 struct ComponentsExampleApp: App {
